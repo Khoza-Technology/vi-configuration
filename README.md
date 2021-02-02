@@ -2,36 +2,23 @@
 
 ### Awesome Vim movements
 - D = Delete to the end of the line
-
 - dtchar = delete to char
-
 - dd = delete line
-
 - yy = copy line
-
 - V = Visual block by line
-
 - tchar = go to character leading up to character
-
 - fchar = go to character
-
 - dit or cit = delete inside of html tags
-
 - t> or t< = go to > or <, very useful for html tags
-
 - ; and , = repeat previous t or f command
+- J = join two lines together
 
 ### Awesome Vim Plugins
 - **NerdTree** hit ctrl G and hit ? for documentation
-
 - **Fugitive Vim**, run :Git git-command, to run git commands inside of vim!
-
 - **Vim Surround**, changes outside surrounding quotes, html tags, etc perhaps the most useful plugin
-
 - **Vim Commentary**, use gc in visual mode or gcc in normal mode to comment out code!
-
 - **Coc Nvim**, use Vscode autocompletion!
-
 - **Emmet Vim**, shorthand html coding, example div>li.list*4+a.list.href.link>p
   then hit ctrl + y and then , Enjoy!
 
