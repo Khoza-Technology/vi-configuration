@@ -23,11 +23,8 @@
   then hit ctrl + y and then , Enjoy!
 
 Other nice plugins are only aesthetic
-
 - **Vim Gruvbox**, a nice colorscheme
-
 - **Rainbow Vim**, highlight brackets
-
 - **Lightline Vim**, A nice display bar at the bottom of the page
 
 ### Awesome Vim Plugin Movements and Commands
