@@ -2,35 +2,57 @@
 
 ### Awesome Vim movements
 D = Delete to the end of the line
+
 dtchar = delete to char
+
 dd = delete line
+
 yy = copy line
+
 V = Visual block by line
+
 tchar = go to character leading up to character
+
 fchar = go to character
+
 dit or cit = delete inside of html tags
+
 t> or t< = go to > or <, very useful for html tags
+
 ; and , = repeat previous t or f command
 
 ### Awesome Vim Plugins
 NerdTree hit ctrl G and hit ? for documentation
+
 Fugitive Vim, run :Git git-command, to run git commands inside of vim!
+
 Vim Surround, changes outside surrounding quotes, html tags, etc 
+
 perhaps the most useful plugin
+
 Vim Commentary, use gc in visual mode or gcc in normal mode to 
+
 comment out code!
+
 Coc Nvim, use Vscode autocompletion!
+
 Emmet Vim, shorthand html coding, example div>li.list*4+a.list.href.link>p
+
 then hit ctrl + y and then , Enjoy!
+
 Other nice plugins are only aesthetic
+
 Vim Gruvbox, a nice colorscheme
+
 Rainbow Vim, highlight brackets
+
 Lightline Vim, A nice display bar at the bottom of the page
 
 ### Awesome Vim Plugin Movements and Commands
 #### Vim Surround
 
 Vim surround offers the ys, yss, ds, and cs commands
+
 cs + char + char will 'change the surrounding character to character' example
 
 ```
@@ -41,6 +63,7 @@ Example:
 ```
 
 The ds command is very similar to cs, but instead of 'changing' the char to a certain char, 
+
 ds will only delete surrounding character
 
 ```
@@ -51,6 +74,7 @@ Example:
 ```
 
 the ds and cs also work with html tags, but instead of ds char or cs + char + char, 
+
 run dst or cst<desired-tag-name>
 
 ```
@@ -67,7 +91,9 @@ Example with cst:
 ```
 
 ys is a command which will surround a sequence with a character
+
 ys can be combined with any movement commands or be in Visual mode, also combined with numbers
+
 most practical applications of ys are either ys + num + word or ystchar or ysfchar desired-surrounding
 
 ```
@@ -98,8 +124,11 @@ Ctrl G will open NerdTree
 For more help on commands, hit ? while in NerdTree
 
 In the NerdTree window, the i, o, and t commands are the most useful
+
 i = open window in vertical split
+
 t = open window in new tab
+
 o = open file
 
 To navigate split windows, hit ctrl j, k, l, or h
