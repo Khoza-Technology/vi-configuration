@@ -22,26 +22,26 @@
 - ; and , = repeat previous t or f command
 
 ### Awesome Vim Plugins
-- *NerdTree* hit ctrl G and hit ? for documentation
+- **NerdTree** hit ctrl G and hit ? for documentation
 
-- *Fugitive Vim*, run :Git git-command, to run git commands inside of vim!
+- **Fugitive Vim**, run :Git git-command, to run git commands inside of vim!
 
-- *Vim Surround*, changes outside surrounding quotes, html tags, etc perhaps the most useful plugin
+- **Vim Surround**, changes outside surrounding quotes, html tags, etc perhaps the most useful plugin
 
-- *Vim Commentary*, use gc in visual mode or gcc in normal mode to comment out code!
+- **Vim Commentary**, use gc in visual mode or gcc in normal mode to comment out code!
 
-- *Coc Nvim*, use Vscode autocompletion!
+- **Coc Nvim**, use Vscode autocompletion!
 
-- *Emmet Vim*, shorthand html coding, example div>li.list*4+a.list.href.link>p
+- **Emmet Vim**, shorthand html coding, example div>li.list*4+a.list.href.link>p
   then hit ctrl + y and then , Enjoy!
 
 Other nice plugins are only aesthetic
 
-- *Vim Gruvbox*, a nice colorscheme
+- **Vim Gruvbox**, a nice colorscheme
 
-- *Rainbow Vim*, highlight brackets
+- **Rainbow Vim**, highlight brackets
 
-- *Lightline Vim*, A nice display bar at the bottom of the page
+- **Lightline Vim**, A nice display bar at the bottom of the page
 
 ### Awesome Vim Plugin Movements and Commands
 #### Vim Surround
