@@ -1,4 +1,23 @@
 ## Khoza's Vim Setup
+To Install vim setup run on Vim (Not Neovim)
+
+```
+cd ~
+git clone https://github.com/Khoza-Technology/vi-configuration
+mv vi-configuration/init.vim .vimrc
+```
+If vim-plug is uninstalled, run 
+```
+# Vim:
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+If vim-plug is not working, make sure that github is installed with
+```
+sudo apt install git
+```
+At this point, you are ready to rock n roll!
+
 
 ### Awesome Vim movements
 - D = Delete to the end of the line
