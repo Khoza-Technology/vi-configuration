@@ -1,35 +1,46 @@
-call plug#begin('~/AppData/Local/nvim/plugged')
-Plug 'mattn/emmet-vim' " Plugin to make writing jsx and html easier usable with <C-E>,
-Plug 'itchyny/lightline.vim' " Displays a nice bar that displays what insert mode im in
+call plug#begin()
+" ============================================
+"             Functional Plugins
+" ============================================
+
+Plug 'jiangmiao/auto-pairs' " autopaired brackets/quotes etc
+Plug 'tpope/vim-repeat' " a plugin to make plugin commands repeat with .
+Plug 'tpope/vim-surround' " a plugin to change, add, and remove surrounding characters
+Plug 'mattn/emmet-vim' " html and jsx shorthand, example div>li.list*4 <C-y>,
 Plug 'preservim/nerdtree' " Plugin to make moving around the filesystem easier
 Plug 'luochen1990/rainbow' " Changes the color of nested parenthesis, brackes, commas, and other things
-Plug 'maxmellon/vim-jsx-pretty' " jsx syntax hightlighting
-Plug 'yuezk/vim-js' " syntzx hightlighting for javascript
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " basically a bunch of vscode plugins for vim
 Plug 'tpope/vim-commentary'
-" list of coc plugins... to install, run :CocInstall pluginName
-" coc-css
-" coc-eslint
-" coc-html
-" coc-json
-" coc-prettier
-" coc-tailwindcss
-" coc-tsserver
-" coc-yaml
-Plug 'tpope/vim-surround' " a plugin to change surrounding quotes brackets and parenthesis use cs {changefrom} {change to} example: cs')
-Plug 'tpope/vim-repeat' " a plugin to make vim surround commands repeatable with the . command
-Plug 'jiangmiao/auto-pairs' " autopaired brackets/quotes etc
-Plug 'morhetz/gruvbox' " colorscheme
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+
+" ============================================
+"                Coc Plugin
+" ============================================
+"       Coc adds language servers for vim
+"  Essential plugins for development include, 
+"       coc-css, coc-json, and coc-html
+"   To install, run :CocInstall pluginName
+" ============================================
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocompletion tool
+
+" ============================================
+"       Nonessential 'Pretty' Plugins
+" ============================================
+Plug 'maxmellon/vim-jsx-pretty' " jsx syntax hightlighting
+Plug 'yuezk/vim-js' " syntzx hightlighting for javascript
+Plug 'itchyny/lightline.vim' " Displays a nice bar that displays what insert mode im in
+Plug 'morhetz/gruvbox' " colorscheme
 call plug#end()
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-syntax on " turns on syntax highlighting
+
+" ============================================
+"             General Settings
+" ============================================
+syntax on
+colorscheme gruvbox
 set shiftwidth=2 " the > command is equal to two spacs
-set background=dark " sets gruvbox to a dark mode
+set background=dark
 set laststatus=2 " sets the status line for vim needs to be here for lightline to work
-set incsearch " sets incremental search
+set incsearch
 set hlsearch " shows results of search as its type
 set expandtab " converts tabs to spaces
 set autoindent " indents to current position
@@ -37,24 +48,23 @@ set fileformat=unix " sets the file format
 set encoding=utf-8 "sets the encoding
 set number relativenumber "sets the line number and relativenumber shows the number of the lines relative to the current position
 set splitbelow splitright " set the splitwindow to be right when the split window is opened
-set termguicolors " sets true color for terminal
-"sets colors of javascript and jsx files to be less ugly than the gruvbox
-"defauts
+
+"sets colors of javascript and jsx files
 autocmd BufNewFile,BufRead *.js,*.jsx hi Function guifg=#d65d0e
 autocmd BufNewFile,BufRead *.js,*.jsx hi String guifg=#8ec07c
 autocmd BufNewFile,BufRead *.js,*.jsx hi Type guifg=#458588
-"sets background to none for background image support if you don't want
-"background images, you can delete this safely
 
-" maps S to replace all
+" ============================================
+"              Vim Key Mappings
+" ============================================
+" replace all
 nnoremap S : %s//g<Left><Left>
-" maps B to beggining of line
+" beggining of line
 nnoremap B ^
-" maps E to end of line
+" end of line
 nnoremap E $
-"maps jk to escape 
+" escape 
 inoremap jk <esc>
-" maps ctrl g to :NERDTreeToggle
 nmap <C-g> :NERDTreeToggle<CR>
 " easier commands to navigate a split screen
 map <C-j> <C-w>j
@@ -62,25 +72,23 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
+" ============================================
+"              Plugin Settings
+" ============================================
+" coc settings
 set formatoptions-=cro
-
 " TextEdit might fail if hidden is not set.
 set hidden
-
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
-
 " Give more space for displaying messages.
 set cmdheight=2
-
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
-
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
@@ -89,7 +97,6 @@ if has("patch-8.1.1564")
 else
   set signcolumn=yes
 endif
-
 " use tab for trigger completion with characters ahead and navigate.
 " note: use command ':Verbose imap <tab>' to make sure tab is not mapped by
 " Other plugin before putting this into your config.
@@ -225,20 +232,21 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" End of coc settings
 
 let g:gruvbox_contrast_dark='hard' " color scheme contrast
-let g:gruvbox_italic=1 " allows for terminal italics
-let g:vim_jsx_pretty_enable_jsx_highlight = 1 " highlights jsx
-colorscheme gruvbox " grubox color scheme
+let g:vim_jsx_pretty_enable_jsx_highlight=1
 let g:user_emmet_leader_key="<C-y>" " sets the key for emmet to a space instead of <C-y>
 let g:rainbow_active=1 " allows vim rainbow to be loaded on start
-"sets color scheme of the lightline plugin
+
+" sets color scheme of the lightline plugin
 let g:lightline = {
   \'colorscheme': 'gruvbox',
 \}
-" for emmet, div.container = <div className="container"></div> instead of using class in javascript and jsx files
+
+" emmet setting so classes work in jsx
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
- \},
+  \    'extends' : 'jsx',
+  \  },
 \}
