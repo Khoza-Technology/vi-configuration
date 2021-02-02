@@ -1,52 +1,47 @@
 ## Khoza's Vim Setup
 
 ### Awesome Vim movements
-D = Delete to the end of the line
+- D = Delete to the end of the line
 
-dtchar = delete to char
+- dtchar = delete to char
 
-dd = delete line
+- dd = delete line
 
-yy = copy line
+- yy = copy line
 
-V = Visual block by line
+- V = Visual block by line
 
-tchar = go to character leading up to character
+- tchar = go to character leading up to character
 
-fchar = go to character
+- fchar = go to character
 
-dit or cit = delete inside of html tags
+- dit or cit = delete inside of html tags
 
-t> or t< = go to > or <, very useful for html tags
+- t> or t< = go to > or <, very useful for html tags
 
-; and , = repeat previous t or f command
+- ; and , = repeat previous t or f command
 
 ### Awesome Vim Plugins
-NerdTree hit ctrl G and hit ? for documentation
+- *NerdTree* hit ctrl G and hit ? for documentation
 
-Fugitive Vim, run :Git git-command, to run git commands inside of vim!
+- *Fugitive Vim*, run :Git git-command, to run git commands inside of vim!
 
-Vim Surround, changes outside surrounding quotes, html tags, etc 
+- *Vim Surround*, changes outside surrounding quotes, html tags, etc perhaps the most useful plugin
 
-perhaps the most useful plugin
+- *Vim Commentary*, use gc in visual mode or gcc in normal mode to comment out code!
 
-Vim Commentary, use gc in visual mode or gcc in normal mode to 
+- *Coc Nvim*, use Vscode autocompletion!
 
-comment out code!
-
-Coc Nvim, use Vscode autocompletion!
-
-Emmet Vim, shorthand html coding, example div>li.list*4+a.list.href.link>p
-
-then hit ctrl + y and then , Enjoy!
+- *Emmet Vim*, shorthand html coding, example div>li.list*4+a.list.href.link>p
+  then hit ctrl + y and then , Enjoy!
 
 Other nice plugins are only aesthetic
 
-Vim Gruvbox, a nice colorscheme
+- *Vim Gruvbox*, a nice colorscheme
 
-Rainbow Vim, highlight brackets
+- *Rainbow Vim*, highlight brackets
 
-Lightline Vim, A nice display bar at the bottom of the page
+- *Lightline Vim*, A nice display bar at the bottom of the page
 
 ### Awesome Vim Plugin Movements and Commands
 #### Vim Surround
