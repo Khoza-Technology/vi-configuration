@@ -2,7 +2,6 @@ call plug#begin()
 " ============================================
 "             Functional Plugins
 " ============================================
-
 Plug 'jiangmiao/auto-pairs' " autopaired brackets/quotes etc
 Plug 'tpope/vim-repeat' " a plugin to make plugin commands repeat with .
 Plug 'tpope/vim-surround' " a plugin to change, add, and remove surrounding characters
@@ -65,6 +64,9 @@ nnoremap B ^
 nnoremap E $
 " escape 
 inoremap jk <esc>
+map <space>p "+p
+nmap <space>y "+yy
+vmap <space>y "+y
 nmap <C-g> :NERDTreeToggle<CR>
 " easier commands to navigate a split screen
 map <C-j> <C-w>j
@@ -231,7 +233,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " End of coc settings
 
 let g:gruvbox_contrast_dark='hard' " color scheme contrast
