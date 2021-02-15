@@ -2,9 +2,11 @@
 To Install vim setup run on Vim (Not Neovim)
 
 ```
+sudo apt install vim
 cd ~
 git clone https://github.com/Khoza-Technology/vi-configuration
 mv vi-configuration/init.vim .vimrc
+rm -rf vi-configuration
 ```
 If vim-plug is uninstalled, run 
 ```
